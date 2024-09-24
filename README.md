@@ -21,7 +21,7 @@ This program takes a URL from the user via stdin, sends an HTTP request, and par
    Replace `<url>` with the website you want to check.
    Ex: www.some_site.ca
    ```bash
-   python3 WebTester.py www,uvic.ca
+   python3 WebTester.py www.uvic.ca
    ```
 
 ### Accepted Input:
@@ -46,8 +46,8 @@ For a valid URL, the program will provide the following output:
 ```plaintext
 Website: www.someSite.ca
 1. Supports http2: (True/False)
-2. Cookies:
-   - Cookie-name: name, expire, domain
+2. List of Cookies:
+cookie-name: name, expire, domain
 3. Password-protected: (true/false)
 ```
 
@@ -66,7 +66,7 @@ Website: www.someSite.ca
   - If a status code of `302` or `301` (redirection) is detected, the program will redirect the request to the new location. The output will include an additional line:
   
     ```plaintext
-    Redirection... (indicating the request is being redirected)
+    Redirecting... (indicating the request is being redirected)
     ```
   
 - **Authentication Required**:
